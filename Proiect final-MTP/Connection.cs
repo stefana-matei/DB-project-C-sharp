@@ -35,7 +35,7 @@ namespace Proiect_final_MTP
 
             sqlConnection.Open();
 
-            // Migrari
+            #region Migrari
             connection.dropTables(sqlConnection);
 
             connection.createStudentiTable(sqlConnection);
@@ -48,9 +48,10 @@ namespace Proiect_final_MTP
 
             connection.createLoginAdminTable(sqlConnection);
             connection.createLoginStudentTable(sqlConnection);
+            #endregion
 
 
-            // Populare
+            #region Populare BD
             //  metoda in care executam query pentru popularea bazei de date cu studenti
             connection.insertStudentiTable(sqlConnection);
             //  metoda in care executam query pentru popularea bazei de date cu notele studentilor
@@ -62,6 +63,7 @@ namespace Proiect_final_MTP
             connection.insertLoginAdminTable(sqlConnection);
             //  metoda in care executam query pentru popularea bazei de date cu datele de conectare a studentilor
             connection.insertLoginStudentTable(sqlConnection);
+            #endregion
 
 
             sqlConnection.Close();
@@ -82,7 +84,7 @@ namespace Proiect_final_MTP
         }
 
 
-        //----------------Tabela login_administrator----------------
+        #region Tabela login_administrator
         // crearea tabelei login_administrator in BD
         private void createLoginAdminTable(MySqlConnection sqlConnection)
         {
@@ -117,11 +119,11 @@ namespace Proiect_final_MTP
 
             new MySqlCommand(query, sqlConnection).ExecuteNonQuery();
         }
-        //----------------------------------------------------------
+        #endregion
 
 
 
-        //----------------Tabela login_student----------------
+        #region Tabela login_student
         // crearea tabelei login_student in BD
         private void createLoginStudentTable(MySqlConnection sqlConnection)
         {
@@ -160,7 +162,7 @@ namespace Proiect_final_MTP
 
             new MySqlCommand(query, sqlConnection).ExecuteNonQuery();
         }
-        //----------------------------------------------------
+        #endregion
 
 
         // metoda prin care se sterg tabelele din BD
@@ -170,7 +172,7 @@ namespace Proiect_final_MTP
         }
 
 
-        //----------------Tabela studenti----------------
+        #region Tabela studenti
         //  crearea tabelei studenti in BD
         private void createStudentiTable(MySqlConnection sqlConnection)
         {
@@ -206,10 +208,10 @@ namespace Proiect_final_MTP
 
             new MySqlCommand(query, sqlConnection).ExecuteNonQuery();
         }
-        //-----------------------------------------------
+        #endregion
 
 
-        //----------------Tabela medii----------------
+        #region Tabela medii
         //  crearea tabelei medii in BD
         private void createMediiTable(MySqlConnection sqlConnection)
         {
@@ -251,10 +253,10 @@ namespace Proiect_final_MTP
 
             new MySqlCommand(query, sqlConnection).ExecuteNonQuery();
         }
-        //--------------------------------------------
+        #endregion
 
 
-        //----------------Tabela note----------------
+        #region Tabela note
         //  crearea tabelei note in BD
         private void createNoteTable(MySqlConnection sqlConnection)
         {
@@ -416,10 +418,10 @@ namespace Proiect_final_MTP
 
             new MySqlCommand(query, sqlConnection).ExecuteNonQuery();
         }
-        //--------------------------------------------
+        #endregion
 
 
-
+        #region Functii / Trigger
         // trigger(SQL) ce se executa la aparitia unui eveniment - la adaugarea unei note
         // modifica starea anumitor obiecte din DB - se calculeaza automat atat media pe anul respectiv
         // cat si media generala
@@ -588,5 +590,6 @@ namespace Proiect_final_MTP
 
             new MySqlCommand(query, sqlConnection).ExecuteNonQuery();
         }
+        #endregion
     }
 }
