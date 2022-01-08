@@ -158,6 +158,12 @@
   <ItemGroup>
     <Compile Include="Admin.cs" />
     <Compile Include="Connection.cs" />
+    <Compile Include="Documente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Documente.Designer.cs">
+      <DependentUpon>Documente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,11 +203,42 @@
     <Compile Include="Rapoarte.Designer.cs">
       <DependentUpon>Rapoarte.cs</DependentUpon>
     </Compile>
+    <Compile Include="Restante.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Restante.Designer.cs">
+      <DependentUpon>Restante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SituatieFinala.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SituatieFinala.Designer.cs">
+      <DependentUpon>SituatieFinala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SituatieScolara.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SituatieScolara.Designer.cs">
+      <DependentUpon>SituatieScolara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Studenti.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Studenti.Designer.cs">
       <DependentUpon>Studenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentLogin.Designer.cs">
+      <DependentUpon>StudentLogin.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
