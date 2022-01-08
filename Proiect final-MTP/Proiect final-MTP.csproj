@@ -156,6 +156,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdaugareNota.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdaugareNota.Designer.cs">
+      <DependentUpon>AdaugareNota.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="Documente.cs">
