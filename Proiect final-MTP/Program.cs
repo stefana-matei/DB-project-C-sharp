@@ -14,7 +14,7 @@ namespace Proiect_final_MTP
         [STAThread]
         static void Main()
         {
-            // Rulam migratiile o singura data la pornirea programului
+            // Rulare migratii o singura data la pornirea programului
             Connection.runMigrations();
 
             Application.EnableVisualStyles();
