@@ -166,13 +166,12 @@ namespace Proiect_final_MTP
                 document.Add(table);
                 document.Add(newLineParagraph);
                 document.Add(footerParagraph);
-
                 document.Close();
+
+                MessageBox.Show("Document generat cu succes!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
                 Process.Start(fileName);
             }
-
-
-
             #endregion
         }
 
