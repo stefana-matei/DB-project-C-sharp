@@ -258,8 +258,8 @@ namespace Proiect_final_MTP
                 document.Close();
 
                 MessageBox.Show("Document generat cu succes!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                lblDataGenerare.Visible = true;
-                lblDataGenerare.Text = "Data generare: " + DateTime.Now.ToString();
+                lblDataFoaieM.Visible = true;
+                lblDataFoaieM.Text = "Data generare: " + DateTime.Now.ToString();
 
 
                 Process.Start(fileName);
