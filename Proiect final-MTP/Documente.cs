@@ -34,17 +34,6 @@ namespace Proiect_final_MTP
         // buton pentru generare PDF
         private void btnGenerareDocument_Click(object sender, EventArgs e)
         {
-            //string query =
-            //    " SELECT disciplina," +
-            //    "        an_studiu," +
-            //    "        MAX(nota) AS nota_finala" +
-            //    " FROM note" +
-            //    " WHERE note.nr_legitimatie = '" + Student.Legitimatie + "'" +
-            //    " GROUP BY disciplina," +
-            //    "          an_studiu" +
-            //    "  ORDER BY an_studiu DESC," +
-            //    "           disciplina";
-
             string query =
                    " SELECT note.disciplina," +
                    "        note.an_studiu," +
@@ -180,7 +169,7 @@ namespace Proiect_final_MTP
         }
 
 
-        // creare DataTable cu datele din BD(in functie de query-ul executat)
+        // creare DataTable cu datele din BD
         private DataTable makeDataTable(string query)
         {
             sqlConnection.Open();
