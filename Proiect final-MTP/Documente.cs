@@ -117,7 +117,7 @@ namespace Proiect_final_MTP
             Table table = new Table(dataTable.Columns.Count, false);
             table.SetMinWidth(100)
                  .SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER)
-                 .SetFontSize(8);
+                 .SetFontSize(10);
 
             for (int i = 0; i < dataTable.Columns.Count;i++)
             {
