@@ -29,6 +29,7 @@ namespace Proiect_final_MTP
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblDataGenerare = new System.Windows.Forms.Label();
             this.lblFoaieMatricola = new System.Windows.Forms.Label();
             this.lblFileUpload = new System.Windows.Forms.Label();
@@ -36,7 +37,11 @@ namespace Proiect_final_MTP
             this.pcbUpload = new System.Windows.Forms.PictureBox();
             this.pcbGenerate = new System.Windows.Forms.PictureBox();
             this.btnGenerare = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDragDrop = new System.Windows.Forms.Label();
+            this.progressBarUpload = new System.Windows.Forms.ProgressBar();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.btnSalvareModificari = new FontAwesome.Sharp.IconButton();
+            this.btnCancel = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUpload)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbGenerate)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +51,7 @@ namespace Proiect_final_MTP
             this.lblDataGenerare.AutoSize = true;
             this.lblDataGenerare.Font = new System.Drawing.Font("Lucida Bright", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataGenerare.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDataGenerare.Location = new System.Drawing.Point(684, 224);
+            this.lblDataGenerare.Location = new System.Drawing.Point(598, 196);
             this.lblDataGenerare.Name = "lblDataGenerare";
             this.lblDataGenerare.Size = new System.Drawing.Size(74, 22);
             this.lblDataGenerare.TabIndex = 34;
@@ -71,7 +76,7 @@ namespace Proiect_final_MTP
             this.lblFileUpload.AutoSize = true;
             this.lblFileUpload.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblFileUpload.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFileUpload.Location = new System.Drawing.Point(197, 312);
+            this.lblFileUpload.Location = new System.Drawing.Point(197, 282);
             this.lblFileUpload.Name = "lblFileUpload";
             this.lblFileUpload.Size = new System.Drawing.Size(148, 27);
             this.lblFileUpload.TabIndex = 35;
@@ -80,18 +85,18 @@ namespace Proiect_final_MTP
             // 
             // lbxFileName
             // 
-            this.lbxFileName.Font = new System.Drawing.Font("Lucida Bright", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbxFileName.ItemHeight = 20;
-            this.lbxFileName.Location = new System.Drawing.Point(202, 367);
+            this.lbxFileName.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbxFileName.ItemHeight = 23;
+            this.lbxFileName.Location = new System.Drawing.Point(202, 337);
             this.lbxFileName.Name = "lbxFileName";
-            this.lbxFileName.Size = new System.Drawing.Size(590, 104);
+            this.lbxFileName.Size = new System.Drawing.Size(858, 119);
             this.lbxFileName.TabIndex = 0;
             // 
             // pcbUpload
             // 
             this.pcbUpload.BackColor = System.Drawing.SystemColors.Window;
             this.pcbUpload.Image = global::Proiect_final_MTP.Properties.Resources.icons8_upload_40;
-            this.pcbUpload.Location = new System.Drawing.Point(471, 380);
+            this.pcbUpload.Location = new System.Drawing.Point(602, 352);
             this.pcbUpload.Name = "pcbUpload";
             this.pcbUpload.Size = new System.Drawing.Size(45, 46);
             this.pcbUpload.TabIndex = 36;
@@ -123,22 +128,77 @@ namespace Proiect_final_MTP
             this.btnGenerare.TabIndex = 31;
             this.btnGenerare.Text = "Generare ";
             this.btnGenerare.UseVisualStyleBackColor = false;
+            this.btnGenerare.Click += new System.EventHandler(this.btnGenerare_Click);
             // 
-            // label1
+            // lblDragDrop
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Window;
-            this.label1.Font = new System.Drawing.Font("Lucida Bright", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(379, 429);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 22);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Drag and drop files here";
+            this.lblDragDrop.AutoSize = true;
+            this.lblDragDrop.BackColor = System.Drawing.SystemColors.Window;
+            this.lblDragDrop.Font = new System.Drawing.Font("Lucida Bright", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDragDrop.Location = new System.Drawing.Point(510, 401);
+            this.lblDragDrop.Name = "lblDragDrop";
+            this.lblDragDrop.Size = new System.Drawing.Size(238, 22);
+            this.lblDragDrop.TabIndex = 37;
+            this.lblDragDrop.Text = "Drag and drop files here";
+            // 
+            // progressBarUpload
+            // 
+            this.progressBarUpload.Location = new System.Drawing.Point(202, 433);
+            this.progressBarUpload.Name = "progressBarUpload";
+            this.progressBarUpload.Size = new System.Drawing.Size(858, 23);
+            this.progressBarUpload.TabIndex = 38;
+            this.progressBarUpload.Visible = false;
+            // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // btnSalvareModificari
+            // 
+            this.btnSalvareModificari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(194)))));
+            this.btnSalvareModificari.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvareModificari.FlatAppearance.BorderSize = 2;
+            this.btnSalvareModificari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvareModificari.Font = new System.Drawing.Font("Lucida Bright", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvareModificari.ForeColor = System.Drawing.Color.Snow;
+            this.btnSalvareModificari.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnSalvareModificari.IconColor = System.Drawing.Color.Black;
+            this.btnSalvareModificari.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSalvareModificari.Location = new System.Drawing.Point(202, 479);
+            this.btnSalvareModificari.Name = "btnSalvareModificari";
+            this.btnSalvareModificari.Size = new System.Drawing.Size(192, 37);
+            this.btnSalvareModificari.TabIndex = 39;
+            this.btnSalvareModificari.Text = "Salvare modificari";
+            this.btnSalvareModificari.UseVisualStyleBackColor = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(194)))));
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatAppearance.BorderSize = 2;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Lucida Bright", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Snow;
+            this.btnCancel.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnCancel.IconColor = System.Drawing.Color.Black;
+            this.btnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancel.Location = new System.Drawing.Point(437, 479);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(109, 37);
+            this.btnCancel.TabIndex = 40;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // FoaieMatricola
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.Controls.Add(this.label1);
+            this.AllowDrop = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSalvareModificari);
+            this.Controls.Add(this.progressBarUpload);
+            this.Controls.Add(this.lblDragDrop);
             this.Controls.Add(this.pcbUpload);
             this.Controls.Add(this.lbxFileName);
             this.Controls.Add(this.lblFileUpload);
@@ -148,6 +208,8 @@ namespace Proiect_final_MTP
             this.Controls.Add(this.btnGenerare);
             this.Name = "FoaieMatricola";
             this.Size = new System.Drawing.Size(1378, 600);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.FoaieMatricola_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.FoaieMatricola_DragEnter);
             ((System.ComponentModel.ISupportInitialize)(this.pcbUpload)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbGenerate)).EndInit();
             this.ResumeLayout(false);
@@ -164,6 +226,10 @@ namespace Proiect_final_MTP
         private System.Windows.Forms.Label lblFileUpload;
         private System.Windows.Forms.ListBox lbxFileName;
         private System.Windows.Forms.PictureBox pcbUpload;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDragDrop;
+        private System.Windows.Forms.ProgressBar progressBarUpload;
+        private System.Windows.Forms.Timer timer;
+        private FontAwesome.Sharp.IconButton btnSalvareModificari;
+        private FontAwesome.Sharp.IconButton btnCancel;
     }
 }
