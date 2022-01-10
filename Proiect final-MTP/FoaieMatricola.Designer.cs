@@ -170,6 +170,7 @@ namespace Proiect_final_MTP
             this.btnSalvareModificari.TabIndex = 39;
             this.btnSalvareModificari.Text = "Salvare modificari";
             this.btnSalvareModificari.UseVisualStyleBackColor = false;
+            this.btnSalvareModificari.Click += new System.EventHandler(this.btnSalvareModificari_Click);
             // 
             // btnCancel
             // 

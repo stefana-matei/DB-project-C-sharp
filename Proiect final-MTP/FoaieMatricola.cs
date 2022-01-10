@@ -18,6 +18,8 @@ namespace Proiect_final_MTP
     public partial class FoaieMatricola : UserControl
     {
         static string fileName;
+        static string sourcePath;
+        static string destinationPath;
         MySqlConnection sqlConnection = Connection.getSqlConnection();
 
         public FoaieMatricola()
@@ -43,14 +45,45 @@ namespace Proiect_final_MTP
             foreach (string file in droppedFiles)
             {
                 this.timer.Start();
-                string fileName = getFileName(file);
-
+                
                 pcbUpload.Visible = false;
                 lblDragDrop.Visible = false;
                 progressBarUpload.Visible = true;
-                FoaieMatricola.fileName = fileName;
+                FoaieMatricola.fileName = getFileName(file);
+                FoaieMatricola.sourcePath = getFilePath(file);
+            }
+        }
 
-                    
+
+        // salvare fisiere incarcate
+        private void btnSalvareModificari_Click(object sender, EventArgs e)
+        {
+            string sourcePath, destinationPath;
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+
+            if(folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                FoaieMatricola.destinationPath = folderBrowserDialog.SelectedPath;
+            }
+
+            try
+            {
+                for (int i = 0; i < lbxFileName.Items.Count; i++)
+                {
+                    destinationPath = FoaieMatricola.destinationPath + "\\" + lbxFileName.Items[i].ToString();
+                    sourcePath = FoaieMatricola.sourcePath;
+                    destinationPath = Path.Combine(sourcePath, destinationPath);
+                    File.Copy(sourcePath, destinationPath, true);
+                }
+
+                if (lbxFileName.Items.Count == 1)
+                    MessageBox.Show("Incarcare fisier cu succes!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (lbxFileName.Items.Count > 1)
+                    MessageBox.Show("Incarcare fisiere cu succes!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show(exception.ToString(), "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -62,7 +95,7 @@ namespace Proiect_final_MTP
             if(progressBarUpload.Value >= progressBarUpload.Maximum)
             {
                 timer.Stop();
-                MessageBox.Show("Fisier incarcat cu succes!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Fisier incarcat cu succes!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 progressBarUpload.Value = progressBarUpload.Minimum;
                 progressBarUpload.Visible = false;
                 lbxFileName.Items.Add(FoaieMatricola.fileName);
@@ -70,9 +103,17 @@ namespace Proiect_final_MTP
         }
 
 
-        private string getFileName(string filePath)
+        // metoda ce returneaza calea fisierului 
+        private string getFilePath(string file)
         {
-            return Path.GetFileName(filePath);
+            return Path.GetFullPath(file);
+        }
+        
+
+        // metoda ce returneaza numele fisierului
+        private string getFileName(string file)
+        {
+            return Path.GetFileName(file);
         }
 
 
@@ -247,5 +288,6 @@ namespace Proiect_final_MTP
             return dataTable;
         }
         #endregion
+
     }
 }
