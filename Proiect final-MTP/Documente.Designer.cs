@@ -30,6 +30,7 @@ namespace Proiect_final_MTP
         private void InitializeComponent()
         {
             this.lblRaportDetaliat = new System.Windows.Forms.Label();
+            this.lblDataGenerare = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGenerareDocument = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,6 +47,19 @@ namespace Proiect_final_MTP
             this.lblRaportDetaliat.TabIndex = 28;
             this.lblRaportDetaliat.Text = "Raport detaliat - lista disciplinelor contractate (promovate, restante)";
             this.lblRaportDetaliat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDataGenerare
+            // 
+            this.lblDataGenerare.AutoSize = true;
+            this.lblDataGenerare.Font = new System.Drawing.Font("Lucida Bright", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataGenerare.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDataGenerare.Location = new System.Drawing.Point(660, 167);
+            this.lblDataGenerare.Name = "lblDataGenerare";
+            this.lblDataGenerare.Size = new System.Drawing.Size(74, 22);
+            this.lblDataGenerare.TabIndex = 30;
+            this.lblDataGenerare.Text = "lblDate";
+            this.lblDataGenerare.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDataGenerare.Visible = false;
             // 
             // pictureBox1
             // 
@@ -80,6 +94,7 @@ namespace Proiect_final_MTP
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.lblDataGenerare);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblRaportDetaliat);
             this.Controls.Add(this.btnGenerareDocument);
@@ -96,5 +111,6 @@ namespace Proiect_final_MTP
         private FontAwesome.Sharp.IconButton btnGenerareDocument;
         private System.Windows.Forms.Label lblRaportDetaliat;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblDataGenerare;
     }
 }

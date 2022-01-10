@@ -78,6 +78,7 @@ namespace Proiect_final_MTP
             Paragraph headerParagraph = new Paragraph()
                 .Add("Raport detaliat".ToUpper())
                 .Add("\nlista disciplinelor contractate".ToUpper())
+                .Add("\n(promovate, restante)".ToUpper())
                 .SetTextAlignment(TextAlignment.CENTER)
                 .SetFontSize(16)
                 .SetFont(font)
@@ -169,7 +170,10 @@ namespace Proiect_final_MTP
                 document.Close();
 
                 MessageBox.Show("Document generat cu succes!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                lblDataGenerare.Visible = true;
+                lblDataGenerare.Text = "Data generare: " + DateTime.Now.ToString();
+
+
                 Process.Start(fileName);
             }
             #endregion

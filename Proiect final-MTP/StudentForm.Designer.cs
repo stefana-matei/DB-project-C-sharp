@@ -42,6 +42,7 @@ namespace Proiect_final_MTP
             this.btnRestante = new System.Windows.Forms.Button();
             this.btnDocumente = new System.Windows.Forms.Button();
             this.btnDiscipline = new System.Windows.Forms.Button();
+            this.btnFoaieMatricola = new System.Windows.Forms.Button();
             this.documente = new Proiect_final_MTP.Documente();
             this.restante = new Proiect_final_MTP.Restante();
             this.situatieFinala = new Proiect_final_MTP.SituatieFinala();
@@ -163,6 +164,7 @@ namespace Proiect_final_MTP
             // panelMenu
             // 
             this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMenu.Controls.Add(this.btnFoaieMatricola);
             this.panelMenu.Controls.Add(this.btnNoteFinale);
             this.panelMenu.Controls.Add(this.btnLogout);
             this.panelMenu.Controls.Add(this.btnRestante);
@@ -184,7 +186,7 @@ namespace Proiect_final_MTP
             this.btnNoteFinale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNoteFinale.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNoteFinale.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btnNoteFinale.Location = new System.Drawing.Point(219, 22);
+            this.btnNoteFinale.Location = new System.Drawing.Point(233, 22);
             this.btnNoteFinale.Name = "btnNoteFinale";
             this.btnNoteFinale.Size = new System.Drawing.Size(143, 37);
             this.btnNoteFinale.TabIndex = 18;
@@ -205,7 +207,7 @@ namespace Proiect_final_MTP
             this.btnLogout.ForeColor = System.Drawing.SystemColors.MenuText;
             this.btnLogout.Image = global::Proiect_final_MTP.Properties.Resources.icons8_logout_24;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(1213, 17);
+            this.btnLogout.Location = new System.Drawing.Point(1242, 17);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(109, 47);
             this.btnLogout.TabIndex = 17;
@@ -243,7 +245,7 @@ namespace Proiect_final_MTP
             this.btnDocumente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDocumente.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDocumente.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btnDocumente.Location = new System.Drawing.Point(583, 22);
+            this.btnDocumente.Location = new System.Drawing.Point(568, 22);
             this.btnDocumente.Name = "btnDocumente";
             this.btnDocumente.Size = new System.Drawing.Size(124, 37);
             this.btnDocumente.TabIndex = 12;
@@ -262,7 +264,7 @@ namespace Proiect_final_MTP
             this.btnDiscipline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiscipline.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDiscipline.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btnDiscipline.Location = new System.Drawing.Point(69, 22);
+            this.btnDiscipline.Location = new System.Drawing.Point(83, 22);
             this.btnDiscipline.Name = "btnDiscipline";
             this.btnDiscipline.Size = new System.Drawing.Size(114, 37);
             this.btnDiscipline.TabIndex = 11;
@@ -270,6 +272,26 @@ namespace Proiect_final_MTP
             this.btnDiscipline.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDiscipline.UseVisualStyleBackColor = false;
             this.btnDiscipline.Click += new System.EventHandler(this.btnSituatieScolara_Click);
+            // 
+            // btnFoaieMatricola
+            // 
+            this.btnFoaieMatricola.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnFoaieMatricola.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFoaieMatricola.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.btnFoaieMatricola.FlatAppearance.BorderSize = 0;
+            this.btnFoaieMatricola.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(194)))));
+            this.btnFoaieMatricola.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFoaieMatricola.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFoaieMatricola.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btnFoaieMatricola.Location = new System.Drawing.Point(733, 22);
+            this.btnFoaieMatricola.Name = "btnFoaieMatricola";
+            this.btnFoaieMatricola.Size = new System.Drawing.Size(157, 37);
+            this.btnFoaieMatricola.TabIndex = 19;
+            this.btnFoaieMatricola.Text = "Foaie matricola";
+            this.btnFoaieMatricola.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFoaieMatricola.UseVisualStyleBackColor = false;
+            this.btnFoaieMatricola.Visible = false;
+            this.btnFoaieMatricola.Click += new System.EventHandler(this.btnFoaieMatricola_Click);
             // 
             // documente
             // 
@@ -346,5 +368,6 @@ namespace Proiect_final_MTP
         private SituatieFinala situatieFinala;
         private Restante restante;
         private Documente documente;
+        private System.Windows.Forms.Button btnFoaieMatricola;
     }
 }

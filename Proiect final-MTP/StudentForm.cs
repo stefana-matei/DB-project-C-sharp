@@ -24,6 +24,11 @@ namespace Proiect_final_MTP
         // incarcare Form
         private void StudentForm_Load(object sender, EventArgs e)
         {
+            if (Student.AnStudiu() == 3)
+            {
+                btnFoaieMatricola.Visible = true;
+            }
+
             // afisare nume student conectat
             lblLoggedStudentName.Text = Student.Nume + " " + Student.Prenume;
             lblLoggedStudentName.Visible = true;
@@ -34,7 +39,6 @@ namespace Proiect_final_MTP
             restante.Visible = false;
             documente.Visible = false;
             situatieScolara.Show();
-
         }
 
 
@@ -44,6 +48,7 @@ namespace Proiect_final_MTP
             btnNoteFinale.Font = new System.Drawing.Font("Georgia", 12F);
             btnRestante.Font = new System.Drawing.Font("Georgia", 12F);
             btnDocumente.Font = new System.Drawing.Font("Georgia", 12F);
+            btnFoaieMatricola.Font = new System.Drawing.Font("Georgia", 12F);
             btnDiscipline.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Underline);
 
             situatieFinala.Visible = false;
@@ -59,6 +64,7 @@ namespace Proiect_final_MTP
             btnDiscipline.Font = new System.Drawing.Font("Georgia", 12F);
             btnRestante.Font = new System.Drawing.Font("Georgia", 12F);
             btnDocumente.Font = new System.Drawing.Font("Georgia", 12F);
+            btnFoaieMatricola.Font = new System.Drawing.Font("Georgia", 12F);
             btnNoteFinale.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Underline);
 
             situatieScolara.Visible = false;
@@ -74,6 +80,7 @@ namespace Proiect_final_MTP
             btnDiscipline.Font = new System.Drawing.Font("Georgia", 12F);
             btnNoteFinale.Font = new System.Drawing.Font("Georgia", 12F);
             btnDocumente.Font = new System.Drawing.Font("Georgia", 12F);
+            btnFoaieMatricola.Font = new System.Drawing.Font("Georgia", 12F);
             btnRestante.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Underline);
 
             situatieScolara.Visible = false;
@@ -89,6 +96,7 @@ namespace Proiect_final_MTP
             btnDiscipline.Font = new System.Drawing.Font("Georgia", 12F);
             btnNoteFinale.Font = new System.Drawing.Font("Georgia", 12F);
             btnRestante.Font = new System.Drawing.Font("Georgia", 12F);
+            btnFoaieMatricola.Font = new System.Drawing.Font("Georgia", 12F);
             btnDocumente.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Underline);
 
             situatieScolara.Visible = false;
@@ -97,6 +105,21 @@ namespace Proiect_final_MTP
             documente.Show();
         }
 
+
+        // buton pentru accesare foaie matricola(pentru student an terminal)
+        private void btnFoaieMatricola_Click(object sender, EventArgs e)
+        {
+            btnDiscipline.Font = new System.Drawing.Font("Georgia", 12F);
+            btnNoteFinale.Font = new System.Drawing.Font("Georgia", 12F);
+            btnRestante.Font = new System.Drawing.Font("Georgia", 12F);
+            btnDocumente.Font = new System.Drawing.Font("Georgia", 12F);
+            btnFoaieMatricola.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Underline);
+
+            situatieScolara.Visible = false;
+            situatieFinala.Visible = false;
+            restante.Visible = false;
+            documente.Visible = false;
+        }
 
 
         // buton de logout
@@ -107,7 +130,7 @@ namespace Proiect_final_MTP
         }
 
 
-        // ---------------------butoane pentru Form-ul Home---------------------
+        #region butoane pentru Form
         // butonul de inchidere a form-ului
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -161,6 +184,6 @@ namespace Proiect_final_MTP
             btnMaximize.Location = btnRestore.Location;
             btnMaximize.Visible = true;
         }
-        // ----------------------------------------------------------------------
+        #endregion
     }
 }
