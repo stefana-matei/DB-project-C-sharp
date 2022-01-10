@@ -83,6 +83,26 @@ namespace Proiect_final_MTP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap drag_and_drop_areaf {
+            get {
+                object obj = ResourceManager.GetObject("drag-and-drop-areaf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drag_drop_focus {
+            get {
+                object obj = ResourceManager.GetObject("drag-drop-focus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_export_pdf_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-export-pdf-40", resourceCulture);
@@ -186,6 +206,16 @@ namespace Proiect_final_MTP.Properties {
         internal static System.Drawing.Bitmap icons8_university_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-university-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_upload_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-upload-40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -38,6 +38,7 @@ namespace Proiect_final_MTP
             situatieFinala.Visible = false;
             restante.Visible = false;
             documente.Visible = false;
+            foaieMatricola.Visible = false;
             situatieScolara.Show();
         }
 
@@ -54,6 +55,7 @@ namespace Proiect_final_MTP
             situatieFinala.Visible = false;
             restante.Visible = false;
             documente.Visible = false;
+            foaieMatricola.Visible = false;
             situatieScolara.Show();
         }
 
@@ -70,6 +72,7 @@ namespace Proiect_final_MTP
             situatieScolara.Visible = false;
             restante.Visible = false;
             documente.Visible = false;
+            foaieMatricola.Visible = false;
             situatieFinala.Show();
         }
 
@@ -86,6 +89,7 @@ namespace Proiect_final_MTP
             situatieScolara.Visible = false;
             situatieFinala.Visible = false;
             documente.Visible = false;
+            foaieMatricola.Visible = false;
             restante.Show();
         }
 
@@ -102,6 +106,7 @@ namespace Proiect_final_MTP
             situatieScolara.Visible = false;
             situatieFinala.Visible = false;
             restante.Visible = false;
+            foaieMatricola.Visible = false;
             documente.Show();
         }
 
@@ -119,6 +124,7 @@ namespace Proiect_final_MTP
             situatieFinala.Visible = false;
             restante.Visible = false;
             documente.Visible = false;
+            foaieMatricola.Show();
         }
 
 
