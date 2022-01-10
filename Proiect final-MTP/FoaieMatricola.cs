@@ -90,7 +90,7 @@ namespace Proiect_final_MTP
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            this.progressBarUpload.Increment(3);
+            this.progressBarUpload.Increment(7);
 
             if(progressBarUpload.Value >= progressBarUpload.Maximum)
             {

@@ -41,11 +41,11 @@ namespace Proiect_final_MTP
             this.lblRaportDetaliat.AutoSize = true;
             this.lblRaportDetaliat.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblRaportDetaliat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRaportDetaliat.Location = new System.Drawing.Point(159, 118);
+            this.lblRaportDetaliat.Location = new System.Drawing.Point(154, 83);
             this.lblRaportDetaliat.Name = "lblRaportDetaliat";
-            this.lblRaportDetaliat.Size = new System.Drawing.Size(822, 27);
+            this.lblRaportDetaliat.Size = new System.Drawing.Size(191, 27);
             this.lblRaportDetaliat.TabIndex = 28;
-            this.lblRaportDetaliat.Text = "Raport detaliat - lista disciplinelor contractate (promovate, restante)";
+            this.lblRaportDetaliat.Text = "Raport detaliat";
             this.lblRaportDetaliat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblDataGenerare
@@ -53,7 +53,7 @@ namespace Proiect_final_MTP
             this.lblDataGenerare.AutoSize = true;
             this.lblDataGenerare.Font = new System.Drawing.Font("Lucida Bright", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataGenerare.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDataGenerare.Location = new System.Drawing.Point(831, 233);
+            this.lblDataGenerare.Location = new System.Drawing.Point(648, 88);
             this.lblDataGenerare.Name = "lblDataGenerare";
             this.lblDataGenerare.Size = new System.Drawing.Size(74, 22);
             this.lblDataGenerare.TabIndex = 30;
@@ -64,7 +64,7 @@ namespace Proiect_final_MTP
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proiect_final_MTP.Properties.Resources.icons8_export_pdf_40;
-            this.pictureBox1.Location = new System.Drawing.Point(104, 108);
+            this.pictureBox1.Location = new System.Drawing.Point(99, 73);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 46);
             this.pictureBox1.TabIndex = 29;
@@ -81,7 +81,7 @@ namespace Proiect_final_MTP
             this.btnGenerareDocument.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnGenerareDocument.IconColor = System.Drawing.Color.Black;
             this.btnGenerareDocument.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGenerareDocument.Location = new System.Drawing.Point(164, 174);
+            this.btnGenerareDocument.Location = new System.Drawing.Point(398, 79);
             this.btnGenerareDocument.Name = "btnGenerareDocument";
             this.btnGenerareDocument.Size = new System.Drawing.Size(109, 37);
             this.btnGenerareDocument.TabIndex = 26;
