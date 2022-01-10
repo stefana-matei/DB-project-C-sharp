@@ -25,7 +25,6 @@ namespace Proiect_final_MTP
         public FoaieMatricola()
         {
             InitializeComponent();
-            
         }
 
         #region File Upload

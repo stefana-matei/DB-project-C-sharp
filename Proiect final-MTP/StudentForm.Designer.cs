@@ -37,7 +37,6 @@ namespace Proiect_final_MTP
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnRestore = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnFoaieMatricola = new System.Windows.Forms.Button();
             this.btnNoteFinale = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnRestante = new System.Windows.Forms.Button();
@@ -47,7 +46,6 @@ namespace Proiect_final_MTP
             this.restante = new Proiect_final_MTP.Restante();
             this.situatieFinala = new Proiect_final_MTP.SituatieFinala();
             this.situatieScolara = new Proiect_final_MTP.SituatieScolara();
-            this.foaieMatricola = new Proiect_final_MTP.FoaieMatricola();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStudentIcon)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -165,7 +163,6 @@ namespace Proiect_final_MTP
             // panelMenu
             // 
             this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMenu.Controls.Add(this.btnFoaieMatricola);
             this.panelMenu.Controls.Add(this.btnNoteFinale);
             this.panelMenu.Controls.Add(this.btnLogout);
             this.panelMenu.Controls.Add(this.btnRestante);
@@ -176,26 +173,6 @@ namespace Proiect_final_MTP
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1378, 75);
             this.panelMenu.TabIndex = 2;
-            // 
-            // btnFoaieMatricola
-            // 
-            this.btnFoaieMatricola.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnFoaieMatricola.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFoaieMatricola.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.btnFoaieMatricola.FlatAppearance.BorderSize = 0;
-            this.btnFoaieMatricola.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(194)))));
-            this.btnFoaieMatricola.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFoaieMatricola.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFoaieMatricola.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btnFoaieMatricola.Location = new System.Drawing.Point(733, 22);
-            this.btnFoaieMatricola.Name = "btnFoaieMatricola";
-            this.btnFoaieMatricola.Size = new System.Drawing.Size(157, 37);
-            this.btnFoaieMatricola.TabIndex = 19;
-            this.btnFoaieMatricola.Text = "Foaie matricola";
-            this.btnFoaieMatricola.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFoaieMatricola.UseVisualStyleBackColor = false;
-            this.btnFoaieMatricola.Visible = false;
-            this.btnFoaieMatricola.Click += new System.EventHandler(this.btnFoaieMatricola_Click);
             // 
             // btnNoteFinale
             // 
@@ -326,21 +303,12 @@ namespace Proiect_final_MTP
             this.situatieScolara.Size = new System.Drawing.Size(1378, 600);
             this.situatieScolara.TabIndex = 3;
             // 
-            // foaieMatricola
-            // 
-            this.foaieMatricola.Location = new System.Drawing.Point(0, 145);
-            this.foaieMatricola.Name = "foaieMatricola";
-            this.foaieMatricola.Size = new System.Drawing.Size(1378, 600);
-            this.foaieMatricola.TabIndex = 7;
-            this.foaieMatricola.Visible = false;
-            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1378, 787);
-            this.Controls.Add(this.foaieMatricola);
             this.Controls.Add(this.documente);
             this.Controls.Add(this.restante);
             this.Controls.Add(this.situatieFinala);
@@ -378,7 +346,5 @@ namespace Proiect_final_MTP
         private SituatieFinala situatieFinala;
         private Restante restante;
         private Documente documente;
-        private System.Windows.Forms.Button btnFoaieMatricola;
-        private FoaieMatricola foaieMatricola;
     }
 }

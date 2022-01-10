@@ -27,7 +27,7 @@ namespace Proiect_final_MTP
 
         private void Documente_Load(object sender, EventArgs e)
         {
-            //
+            
         }
 
 

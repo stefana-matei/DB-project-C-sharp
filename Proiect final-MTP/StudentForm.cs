@@ -24,11 +24,6 @@ namespace Proiect_final_MTP
         // incarcare Form
         private void StudentForm_Load(object sender, EventArgs e)
         {
-            if (Student.AnStudiu() == 3)
-            {
-                btnFoaieMatricola.Visible = true;
-            }
-
             // afisare nume student conectat
             lblLoggedStudentName.Text = Student.Nume + " " + Student.Prenume;
             lblLoggedStudentName.Visible = true;
@@ -38,7 +33,6 @@ namespace Proiect_final_MTP
             situatieFinala.Visible = false;
             restante.Visible = false;
             documente.Visible = false;
-            foaieMatricola.Visible = false;
             situatieScolara.Show();
         }
 
@@ -49,13 +43,11 @@ namespace Proiect_final_MTP
             btnNoteFinale.Font = new System.Drawing.Font("Georgia", 12F);
             btnRestante.Font = new System.Drawing.Font("Georgia", 12F);
             btnDocumente.Font = new System.Drawing.Font("Georgia", 12F);
-            btnFoaieMatricola.Font = new System.Drawing.Font("Georgia", 12F);
             btnDiscipline.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Underline);
 
             situatieFinala.Visible = false;
             restante.Visible = false;
             documente.Visible = false;
-            foaieMatricola.Visible = false;
             situatieScolara.Show();
         }
 
@@ -66,13 +58,11 @@ namespace Proiect_final_MTP
             btnDiscipline.Font = new System.Drawing.Font("Georgia", 12F);
             btnRestante.Font = new System.Drawing.Font("Georgia", 12F);
             btnDocumente.Font = new System.Drawing.Font("Georgia", 12F);
-            btnFoaieMatricola.Font = new System.Drawing.Font("Georgia", 12F);
             btnNoteFinale.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Underline);
 
             situatieScolara.Visible = false;
             restante.Visible = false;
             documente.Visible = false;
-            foaieMatricola.Visible = false;
             situatieFinala.Show();
         }
 
@@ -83,13 +73,11 @@ namespace Proiect_final_MTP
             btnDiscipline.Font = new System.Drawing.Font("Georgia", 12F);
             btnNoteFinale.Font = new System.Drawing.Font("Georgia", 12F);
             btnDocumente.Font = new System.Drawing.Font("Georgia", 12F);
-            btnFoaieMatricola.Font = new System.Drawing.Font("Georgia", 12F);
             btnRestante.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Underline);
 
             situatieScolara.Visible = false;
             situatieFinala.Visible = false;
             documente.Visible = false;
-            foaieMatricola.Visible = false;
             restante.Show();
         }
 
@@ -100,13 +88,11 @@ namespace Proiect_final_MTP
             btnDiscipline.Font = new System.Drawing.Font("Georgia", 12F);
             btnNoteFinale.Font = new System.Drawing.Font("Georgia", 12F);
             btnRestante.Font = new System.Drawing.Font("Georgia", 12F);
-            btnFoaieMatricola.Font = new System.Drawing.Font("Georgia", 12F);
             btnDocumente.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Underline);
 
             situatieScolara.Visible = false;
             situatieFinala.Visible = false;
             restante.Visible = false;
-            foaieMatricola.Visible = false;
             documente.Show();
         }
 
@@ -118,13 +104,11 @@ namespace Proiect_final_MTP
             btnNoteFinale.Font = new System.Drawing.Font("Georgia", 12F);
             btnRestante.Font = new System.Drawing.Font("Georgia", 12F);
             btnDocumente.Font = new System.Drawing.Font("Georgia", 12F);
-            btnFoaieMatricola.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Underline);
 
             situatieScolara.Visible = false;
             situatieFinala.Visible = false;
             restante.Visible = false;
             documente.Visible = false;
-            foaieMatricola.Show();
         }
 
 
