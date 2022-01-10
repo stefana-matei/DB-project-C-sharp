@@ -33,7 +33,6 @@ namespace Proiect_final_MTP
             this.lblDataRaport = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGenRaport = new FontAwesome.Sharp.IconButton();
-            this.foaieMatricola = new Proiect_final_MTP.FoaieMatricola();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +41,7 @@ namespace Proiect_final_MTP
             this.lblRaportDetaliat.AutoSize = true;
             this.lblRaportDetaliat.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblRaportDetaliat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRaportDetaliat.Location = new System.Drawing.Point(147, 110);
+            this.lblRaportDetaliat.Location = new System.Drawing.Point(117, 124);
             this.lblRaportDetaliat.Name = "lblRaportDetaliat";
             this.lblRaportDetaliat.Size = new System.Drawing.Size(191, 27);
             this.lblRaportDetaliat.TabIndex = 28;
@@ -54,7 +53,7 @@ namespace Proiect_final_MTP
             this.lblDataRaport.AutoSize = true;
             this.lblDataRaport.Font = new System.Drawing.Font("Lucida Bright", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataRaport.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDataRaport.Location = new System.Drawing.Point(646, 113);
+            this.lblDataRaport.Location = new System.Drawing.Point(597, 129);
             this.lblDataRaport.Name = "lblDataRaport";
             this.lblDataRaport.Size = new System.Drawing.Size(74, 22);
             this.lblDataRaport.TabIndex = 30;
@@ -65,7 +64,7 @@ namespace Proiect_final_MTP
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proiect_final_MTP.Properties.Resources.icons8_export_pdf_40;
-            this.pictureBox1.Location = new System.Drawing.Point(103, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(87, 64);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 46);
             this.pictureBox1.TabIndex = 29;
@@ -82,7 +81,7 @@ namespace Proiect_final_MTP
             this.btnGenRaport.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnGenRaport.IconColor = System.Drawing.Color.Black;
             this.btnGenRaport.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGenRaport.Location = new System.Drawing.Point(398, 106);
+            this.btnGenRaport.Location = new System.Drawing.Point(371, 122);
             this.btnGenRaport.Name = "btnGenRaport";
             this.btnGenRaport.Size = new System.Drawing.Size(109, 37);
             this.btnGenRaport.TabIndex = 26;
@@ -90,21 +89,11 @@ namespace Proiect_final_MTP
             this.btnGenRaport.UseVisualStyleBackColor = false;
             this.btnGenRaport.Click += new System.EventHandler(this.btnGenerareDocument_Click);
             // 
-            // foaieMatricola
-            // 
-            this.foaieMatricola.AllowDrop = true;
-            this.foaieMatricola.Location = new System.Drawing.Point(67, 165);
-            this.foaieMatricola.Name = "foaieMatricola";
-            this.foaieMatricola.Size = new System.Drawing.Size(1021, 408);
-            this.foaieMatricola.TabIndex = 31;
-            this.foaieMatricola.Visible = false;
-            // 
             // Documente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Controls.Add(this.foaieMatricola);
             this.Controls.Add(this.lblDataRaport);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblRaportDetaliat);
@@ -123,6 +112,5 @@ namespace Proiect_final_MTP
         private System.Windows.Forms.Label lblRaportDetaliat;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblDataRaport;
-        private FoaieMatricola foaieMatricola;
     }
 }
