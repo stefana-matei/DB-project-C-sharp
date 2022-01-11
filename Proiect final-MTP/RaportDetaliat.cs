@@ -41,12 +41,12 @@ namespace Proiect_final_MTP
 
             DataTable dataTable = makeDataTable(query);
 
-            exportDataTableToPDF(dataTable, "Raport_detaliat_" + Student.Nume + "_" + Student.Prenume);
+            exportRaport(dataTable, "Raport_detaliat_" + Student.Nume + "_" + Student.Prenume);
         }
 
 
         // metoda prin care se exporta datele studentului intr-un document PDF
-        private void exportDataTableToPDF(DataTable dataTable, String fileName)
+        private void exportRaport(DataTable dataTable, String fileName)
         {
             PdfWriter pdfWriter = new PdfWriter(fileName);
             PdfDocument pdfDocument = new PdfDocument(pdfWriter);

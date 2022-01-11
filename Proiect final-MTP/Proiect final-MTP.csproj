@@ -182,7 +182,6 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Instances.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,12 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proiect_final_MTP
@@ -38,8 +33,7 @@ namespace Proiect_final_MTP
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Home home = Instances.getHome();
-            home.Show();
+            new Home().Show();
         }
 
 
@@ -197,7 +191,7 @@ namespace Proiect_final_MTP
         }
 
 
-        // --------------------butoane pentru Form Border-ul Promovabilitate--------------------
+        #region butoane pentru Form
         // butonul de inchidere a form-ului
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -251,5 +245,6 @@ namespace Proiect_final_MTP
             btnMaximize.Location = btnRestore.Location;
             btnMaximize.Visible = true;
         }
+        #endregion
     }
 }

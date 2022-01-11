@@ -34,8 +34,7 @@ namespace Proiect_final_MTP
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Home home = Instances.getHome();
-            home.Show();
+            new Home().Show();
         }
 
 
@@ -125,9 +124,7 @@ namespace Proiect_final_MTP
         }
 
 
-        // ---------------------butoane pentru Form-ul Rapoarte---------------------
-
-
+        #region butoane pentru Form
         // butonul de inchidere a form-ului
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -173,7 +170,7 @@ namespace Proiect_final_MTP
             btnRestore.Visible = true;
         }
 
-        // restore
+
         private void btnRestore_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
@@ -181,5 +178,6 @@ namespace Proiect_final_MTP
             btnMaximize.Location = btnRestore.Location;
             btnMaximize.Visible = true;
         }
+        #endregion
     }
 }

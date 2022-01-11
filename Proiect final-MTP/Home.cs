@@ -1,12 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proiect_final_MTP
@@ -20,11 +15,10 @@ namespace Proiect_final_MTP
 
         MySqlConnection sqlConnection = Connection.getSqlConnection();
 
-        public Home(bool migrations = false)
+        public Home()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-            Instances.setHome(this);
         }
 
 
@@ -152,7 +146,7 @@ namespace Proiect_final_MTP
         }
 
 
-        // ---------------------butoane pentru Form-ul Home---------------------
+        #region butoane pentru Form
         // butonul de inchidere a form-ului
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -206,6 +200,6 @@ namespace Proiect_final_MTP
             btnMaximize.Location = btnRestore.Location;
             btnMaximize.Visible = true;
         }
-        // ----------------------------------------------------------------------
+        #endregion
     }
 }

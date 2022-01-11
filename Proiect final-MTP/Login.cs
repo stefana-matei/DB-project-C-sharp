@@ -78,8 +78,9 @@ namespace Proiect_final_MTP
                     {
                         Admin.Nume = dataReader.GetString(1);
                         Admin.Prenume = dataReader.GetString(2);
-                        new Home(true).Show();
-                        this.Hide();
+                        this.Hide(); 
+                        new Home().Show();
+
                     }
                 }
                 else
@@ -124,36 +125,8 @@ namespace Proiect_final_MTP
         }
 
 
-        // ---------------------butoane pentru Form-ul Login---------------------
-        // buton restore
-        private void btnRestore_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            btnRestore.Visible = false;
-            btnMaximize.Location = btnRestore.Location;
-            btnMaximize.Visible = true;
-        }
-
-
-        //buton pentru minimize
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-            //maximize = false;
-        }
-
-
-        // buton pentru maximize
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            btnMaximize.Visible = false;
-            btnRestore.Location = btnMaximize.Location;
-            btnRestore.Visible = true;
-        }
-
-
-        // buton de cancel
+        #region butoane pentru Form
+        // butonul de inchidere a form-ului
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -181,6 +154,31 @@ namespace Proiect_final_MTP
         {
             mouseDown = false;
         }
-        // ----------------------------------------------------------------------
+
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+            //maximize = false;
+        }
+
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnMaximize.Visible = false;
+            btnRestore.Location = btnMaximize.Location;
+            btnRestore.Visible = true;
+        }
+
+
+        private void btnRestore_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnRestore.Visible = false;
+            btnMaximize.Location = btnRestore.Location;
+            btnMaximize.Visible = true;
+        }
+        #endregion
     }
 }
