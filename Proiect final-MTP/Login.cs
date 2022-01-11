@@ -27,9 +27,13 @@ namespace Proiect_final_MTP
         {
             try
             {
-                if (txtEmail.Text.Equals("") && txtPassword.Text.Equals(""))
+                if (txtEmail.Text.Equals(""))
                 {
-                    MessageBox.Show("Campurile nu sunt completate, mai incearca!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lipseste email-ul, mai incearca!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txtPassword.Text.Equals(""))
+                {
+                    MessageBox.Show("Lipseste parola, mai incearca!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
