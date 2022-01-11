@@ -164,11 +164,11 @@
     </Compile>
     <Compile Include="Admin.cs" />
     <Compile Include="Connection.cs" />
-    <Compile Include="Documente.cs">
+    <Compile Include="RaportDetaliat.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Documente.Designer.cs">
-      <DependentUpon>Documente.cs</DependentUpon>
+    <Compile Include="RaportDetaliat.Designer.cs">
+      <DependentUpon>RaportDetaliat.cs</DependentUpon>
     </Compile>
     <Compile Include="FoaieMatricola.cs">
       <SubType>UserControl</SubType>
@@ -252,8 +252,8 @@
     <Compile Include="StudentLogin.Designer.cs">
       <DependentUpon>StudentLogin.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Documente.resx">
-      <DependentUpon>Documente.cs</DependentUpon>
+    <EmbeddedResource Include="RaportDetaliat.resx">
+      <DependentUpon>RaportDetaliat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FoaieMatricola.resx">
       <DependentUpon>FoaieMatricola.cs</DependentUpon>

@@ -10,24 +10,17 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 using System.Diagnostics;
-using System.IO;
 using System.Windows.Forms;
 
 namespace Proiect_final_MTP
 {
-    public partial class Documente : UserControl
+    public partial class RaportDetaliat : UserControl
     {
         MySqlConnection sqlConnection = Connection.getSqlConnection();
 
-        public Documente()
+        public RaportDetaliat()
         {
             InitializeComponent();
-        }
-
-
-        private void Documente_Load(object sender, EventArgs e)
-        {
-            
         }
 
 
@@ -129,18 +122,6 @@ namespace Proiect_final_MTP
             }
             #endregion
 
-            #region semnatura
-            Paragraph footerParagraph = new Paragraph()
-                .Add("Student")
-                .Add("\n" + Student.FullName().ToUpper())
-                .SetTextAlignment(TextAlignment.RIGHT)
-                .SetFontSize(12)
-                .SetFont(font)
-                .SetFontColor(ColorConstants.DARK_GRAY);
-            #endregion
-
-
-
             #region salvare fisier PDF
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.FileName = fileName;
@@ -155,7 +136,6 @@ namespace Proiect_final_MTP
                 document.Add(newLineParagraph);
                 document.Add(table);
                 document.Add(newLineParagraph);
-                document.Add(footerParagraph);
                 document.Close();
 
                 MessageBox.Show("Document generat cu succes!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -184,9 +164,7 @@ namespace Proiect_final_MTP
             dataAdapter.Dispose();
             sqlConnection.Close();
 
-
             return dataTable;
         }
-
     }
 }

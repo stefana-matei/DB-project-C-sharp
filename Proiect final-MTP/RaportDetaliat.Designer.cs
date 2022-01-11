@@ -1,7 +1,7 @@
 ﻿
 namespace Proiect_final_MTP
 {
-    partial class Documente
+    partial class RaportDetaliat
     {
         /// <summary> 
         /// Required designer variable.
@@ -100,7 +100,6 @@ namespace Proiect_final_MTP
             this.Controls.Add(this.btnGenRaport);
             this.Name = "Documente";
             this.Size = new System.Drawing.Size(1378, 600);
-            this.Load += new System.EventHandler(this.Documente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
