@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Proiect_final_MTP
@@ -21,7 +22,7 @@ namespace Proiect_final_MTP
         {
             dtpData.Format = DateTimePickerFormat.Custom;
             dtpData.CustomFormat = "yyyy-MM-dd";
-            disableButtonAdd();
+            //disableButtonAdd();
 
             try
             {
@@ -83,6 +84,69 @@ namespace Proiect_final_MTP
         // buton pentru adaugarea unei note unui student in BD
         private void btnAdaugareNota_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (txtAnStudiu.Text.Equals(""))
+                {
+                    MessageBox.Show("Lipseste anul de studiu, mai incercati!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txtNrPrezentare.Text.Equals(""))
+                {
+                    MessageBox.Show("Lipseste nr-ul prezentarii, mai incercati!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                else if (txtNotaStudent.Text.Equals(""))
+                {
+                    MessageBox.Show("Lipseste nota, mai incercati!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if(isNumber(txtAnStudiu.Text))
+                    {
+                        if (isNumber(txtNrPrezentare.Text))
+                        {
+                            if (isGrade(txtNotaStudent.Text))
+                            {
+                                adaugareNota();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Nota invalida, mai incercati!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Nr-ul prezentarii trebuie sa fie un numar, mai incercati!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Anul de studiu trebuie sa fie un numar, mai incercati!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        // event dupa ce este luat cursorul mouse-ului 
+        // de pe textbox-ul in care se introduce nota
+        //private void txtNotaStudent_MouseLeave(object sender, EventArgs e)
+        //{
+        //    if (txtNotaStudent.Text != string.Empty && txtAnStudiu.Text != string.Empty && txtNrPrezentare.Text != string.Empty)
+        //    {
+        //        btnAdaugareNota.Enabled = true;
+        //    }
+        //}
+
+
+        // adaugarea unei note
+        private void adaugareNota()
+        {
             bool succes = false;
 
             try
@@ -121,7 +185,7 @@ namespace Proiect_final_MTP
 
             if (succes)
             {
-                disableButtonAdd();
+                //disableButtonAdd();
                 cmbNrLegitimatie.Text = null;
                 cmbDiscipline.Text = null;
                 txtAnStudiu.Text = "";
@@ -132,14 +196,24 @@ namespace Proiect_final_MTP
         }
 
 
-        // event dupa ce este luat cursorul mouse-ului 
-        // de pe textbox-ul in care se introduce nota
-        private void txtNotaStudent_MouseLeave(object sender, EventArgs e)
+        //  verificare daca parametrul dat este un numar
+        private bool isNumber(string number)
         {
-            if (txtNotaStudent.Text != string.Empty && txtAnStudiu.Text != string.Empty && txtNrPrezentare.Text != string.Empty)
+            if (Regex.IsMatch(number, @"^[0-9]+$"))
             {
-                btnAdaugareNota.Enabled = true;
+                return true;
             }
+            else
+                return false;
+        }
+
+        // verificare daca parametrul dat este o nota valida
+        private bool isGrade(string number)
+        {
+            if (Regex.IsMatch(number, @"^([1-9]{1}|10)$"))
+                return true;
+            else
+                return false;
         }
 
 

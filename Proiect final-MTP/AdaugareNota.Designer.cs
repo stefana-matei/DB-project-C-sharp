@@ -48,7 +48,7 @@ namespace Proiect_final_MTP
             // 
             // lblLegitimatie
             // 
-            this.lblLegitimatie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.lblLegitimatie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lblLegitimatie.AutoSize = true;
             this.lblLegitimatie.Font = new System.Drawing.Font("Georgia", 12F);
@@ -60,7 +60,7 @@ namespace Proiect_final_MTP
             // 
             // cmbNrLegitimatie
             // 
-            this.cmbNrLegitimatie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.cmbNrLegitimatie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cmbNrLegitimatie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.cmbNrLegitimatie.FormattingEnabled = true;
@@ -71,7 +71,7 @@ namespace Proiect_final_MTP
             // 
             // lblDisciplina
             // 
-            this.lblDisciplina.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.lblDisciplina.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDisciplina.AutoSize = true;
             this.lblDisciplina.Font = new System.Drawing.Font("Georgia", 12F);
@@ -83,7 +83,7 @@ namespace Proiect_final_MTP
             // 
             // lblAnStudiu
             // 
-            this.lblAnStudiu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.lblAnStudiu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lblAnStudiu.AutoSize = true;
             this.lblAnStudiu.Font = new System.Drawing.Font("Georgia", 12F);
@@ -95,7 +95,7 @@ namespace Proiect_final_MTP
             // 
             // txtAnStudiu
             // 
-            this.txtAnStudiu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.txtAnStudiu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtAnStudiu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnStudiu.Location = new System.Drawing.Point(188, 314);
@@ -105,7 +105,7 @@ namespace Proiect_final_MTP
             // 
             // lblNrPrezentare
             // 
-            this.lblNrPrezentare.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.lblNrPrezentare.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNrPrezentare.AutoSize = true;
             this.lblNrPrezentare.Font = new System.Drawing.Font("Georgia", 12F);
@@ -117,7 +117,7 @@ namespace Proiect_final_MTP
             // 
             // txtNrPrezentare
             // 
-            this.txtNrPrezentare.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.txtNrPrezentare.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNrPrezentare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtNrPrezentare.Location = new System.Drawing.Point(735, 186);
@@ -127,7 +127,7 @@ namespace Proiect_final_MTP
             // 
             // lblData
             // 
-            this.lblData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.lblData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblData.AutoSize = true;
             this.lblData.Font = new System.Drawing.Font("Georgia", 12F);
@@ -139,7 +139,7 @@ namespace Proiect_final_MTP
             // 
             // dtpData
             // 
-            this.dtpData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.dtpData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.dtpData.Location = new System.Drawing.Point(649, 247);
@@ -149,7 +149,7 @@ namespace Proiect_final_MTP
             // 
             // lblNota
             // 
-            this.lblNota.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.lblNota.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNota.AutoSize = true;
             this.lblNota.Font = new System.Drawing.Font("Georgia", 12F);
@@ -161,14 +161,13 @@ namespace Proiect_final_MTP
             // 
             // txtNotaStudent
             // 
-            this.txtNotaStudent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.txtNotaStudent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNotaStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNotaStudent.Location = new System.Drawing.Point(649, 313);
             this.txtNotaStudent.Name = "txtNotaStudent";
             this.txtNotaStudent.Size = new System.Drawing.Size(84, 27);
             this.txtNotaStudent.TabIndex = 16;
-            this.txtNotaStudent.MouseLeave += new System.EventHandler(this.txtNotaStudent_MouseLeave);
             // 
             // pictureBox1
             // 
@@ -182,7 +181,7 @@ namespace Proiect_final_MTP
             // 
             // cmbDiscipline
             // 
-            this.cmbDiscipline.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.cmbDiscipline.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cmbDiscipline.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.cmbDiscipline.FormattingEnabled = true;
@@ -193,7 +192,7 @@ namespace Proiect_final_MTP
             // 
             // btnAdaugareNota
             // 
-            this.btnAdaugareNota.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.btnAdaugareNota.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdaugareNota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.btnAdaugareNota.Cursor = System.Windows.Forms.Cursors.Hand;

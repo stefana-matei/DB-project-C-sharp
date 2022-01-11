@@ -251,6 +251,9 @@
     <Compile Include="StudentLogin.Designer.cs">
       <DependentUpon>StudentLogin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdaugareNota.resx">
+      <DependentUpon>AdaugareNota.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RaportDetaliat.resx">
       <DependentUpon>RaportDetaliat.cs</DependentUpon>
     </EmbeddedResource>
