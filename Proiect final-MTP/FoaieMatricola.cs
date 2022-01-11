@@ -76,9 +76,15 @@ namespace Proiect_final_MTP
                 }
 
                 if (lbxFileName.Items.Count == 1)
+                {
                     MessageBox.Show("Incarcare fisier cu succes!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    defaultListBox();
+                }
                 else if (lbxFileName.Items.Count > 1)
+                {
                     MessageBox.Show("Incarcare fisiere cu succes!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    defaultListBox();
+                }
             }
             catch(Exception exception)
             {
@@ -94,7 +100,6 @@ namespace Proiect_final_MTP
             if(progressBarUpload.Value >= progressBarUpload.Maximum)
             {
                 timer.Stop();
-                //MessageBox.Show("Fisier incarcat cu succes!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 progressBarUpload.Value = progressBarUpload.Minimum;
                 progressBarUpload.Visible = false;
                 lbxFileName.Items.Add(FoaieMatricola.fileName);
@@ -116,8 +121,15 @@ namespace Proiect_final_MTP
         }
 
 
-        // buton de default
+        // buton cancel
         private void btnCancel_Click(object sender, EventArgs e)
+        {
+            defaultListBox();
+        }
+
+
+        // resetare listBox
+        private void defaultListBox()
         {
             pcbUpload.Visible = true;
             lblDragDrop.Visible = true;
