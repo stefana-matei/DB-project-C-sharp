@@ -78,9 +78,9 @@ namespace Proiect_final_MTP
             this.lblFileUpload.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblFileUpload.Location = new System.Drawing.Point(118, 278);
             this.lblFileUpload.Name = "lblFileUpload";
-            this.lblFileUpload.Size = new System.Drawing.Size(148, 27);
+            this.lblFileUpload.Size = new System.Drawing.Size(155, 27);
             this.lblFileUpload.TabIndex = 35;
-            this.lblFileUpload.Text = "File Upload";
+            this.lblFileUpload.Text = "Upload files";
             this.lblFileUpload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbxFileName
