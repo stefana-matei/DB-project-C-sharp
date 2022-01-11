@@ -24,6 +24,7 @@ namespace Proiect_final_MTP
             dtpData.CustomFormat = "yyyy-MM-dd";
             //disableButtonAdd();
 
+            #region DataBase
             try
             {
                 sqlConnection.Open();
@@ -78,6 +79,10 @@ namespace Proiect_final_MTP
             }
 
             sqlConnection.Close();
+            #endregion
+
+            cmbDiscipline.SelectedIndex = 0;
+            cmbNrLegitimatie.SelectedIndex = 0;
         }
 
 
