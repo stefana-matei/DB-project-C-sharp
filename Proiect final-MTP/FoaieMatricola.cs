@@ -142,7 +142,7 @@ namespace Proiect_final_MTP
         #region generare Foaie Matricola
         private void btnGenerare_Click(object sender, EventArgs e)
         {
-            string query =
+            string queryMediiDiscipline =
                 " SELECT disciplina," +
                 "        an_studiu," +
                 "        MAX(nota) AS media" +
@@ -153,15 +153,26 @@ namespace Proiect_final_MTP
                 " ORDER BY an_studiu DESC," +
                 "           disciplina";
 
-            DataTable dataTable = makeDataTable(query);
 
-            exportFoaieMatricola(dataTable, "Foaie_matricola_" + Student.Nume + "_" + Student.Prenume);
+            string queryMediiAnuale =
+                " SELECT medii.medie_an1," +
+                "        medii.medie_an2," +
+                "        medii.medie_an3," +
+                "        medii.medie_generala" +
+                " FROM medii" +
+                " WHERE nr_legitimatie = '" + Student.Legitimatie + "'";
+
+            DataTable dtMediiDiscipline = makeDataTable(queryMediiDiscipline);
+            DataTable dtMediiAnuale = makeDataTable(queryMediiAnuale);
+
+
+            exportFoaieMatricola(dtMediiDiscipline, dtMediiAnuale, "Foaie_matricola_" + Student.Nume + "_" + Student.Prenume);
 
         }
 
 
         // metoda prin care se exporta datele studentului intr-un document PDF
-        private void exportFoaieMatricola(DataTable dataTable, String fileName)
+        private void exportFoaieMatricola(DataTable dtMediiDiscipline, DataTable dtMediiAnuale, String fileName)
         {
             PdfWriter pdfWriter = new PdfWriter(fileName);
             PdfDocument pdfDocument = new PdfDocument(pdfWriter);
@@ -180,6 +191,7 @@ namespace Proiect_final_MTP
                 .SetFontColor(ColorConstants.DARK_GRAY);
             #endregion
 
+
             #region data generarii documentului
             Paragraph dataParagraph = new Paragraph()
                 .Add("\n" + DateTime.Now.ToShortDateString())
@@ -188,6 +200,7 @@ namespace Proiect_final_MTP
                 .SetFont(font)
                 .SetFontColor(ColorConstants.DARK_GRAY);
             #endregion
+
 
             #region informatii student
             Paragraph infoParagraph = new Paragraph()
@@ -199,40 +212,72 @@ namespace Proiect_final_MTP
                 .SetFontColor(ColorConstants.DARK_GRAY);
             #endregion
 
+
             #region linie separatoare
             LineSeparator lineSeparator = new LineSeparator(new SolidLine());
             #endregion
+
 
             #region linie noua
             Paragraph newLineParagraph = new Paragraph(new Text("\n"));
             #endregion
 
-            #region tabel
-            Table table = new Table(dataTable.Columns.Count, false);
-            table.SetMinWidth(100)
+
+            #region tabel medii discipline
+            Table tableMediiDiscipline = new Table(dtMediiDiscipline.Columns.Count, false);
+            tableMediiDiscipline.SetMinWidth(100)
                  .SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER)
                  .SetFontSize(12);
 
-            for (int i = 0; i < dataTable.Columns.Count; i++)
+            for (int i = 0; i < dtMediiDiscipline.Columns.Count; i++)
             {
                 Cell cell = new Cell()
                     .SetBackgroundColor(ColorConstants.GRAY)
                     .SetFont(font)
                     .SetFontSize(10)
                     .SetFontColor(ColorConstants.WHITE)
-                    .Add(new Paragraph(dataTable.Columns[i].ColumnName.ToUpper()));
+                    .Add(new Paragraph(dtMediiDiscipline.Columns[i].ColumnName.ToUpper()));
 
-                table.AddCell(cell);
+                tableMediiDiscipline.AddCell(cell);
             }
 
-            for (int i = 0; i < dataTable.Rows.Count; i++)
+            for (int i = 0; i < dtMediiDiscipline.Rows.Count; i++)
             {
-                for (int j = 0; j < dataTable.Columns.Count; j++)
+                for (int j = 0; j < dtMediiDiscipline.Columns.Count; j++)
                 {
-                    table.AddCell(dataTable.Rows[i][j].ToString());
+                    tableMediiDiscipline.AddCell(dtMediiDiscipline.Rows[i][j].ToString());
                 }
             }
             #endregion
+
+
+            #region tabel medii anuale
+            Table tableMediiAnuale = new Table(dtMediiAnuale.Columns.Count, false);
+            tableMediiAnuale.SetMinWidth(100)
+                 .SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER)
+                 .SetFontSize(12);
+
+            for (int i = 0; i < dtMediiAnuale.Columns.Count; i++)
+            {
+                Cell cell = new Cell()
+                    .SetBackgroundColor(ColorConstants.GRAY)
+                    .SetFont(font)
+                    .SetFontSize(10)
+                    .SetFontColor(ColorConstants.WHITE)
+                    .Add(new Paragraph(dtMediiAnuale.Columns[i].ColumnName.ToUpper()));
+
+                tableMediiAnuale.AddCell(cell);
+            }
+
+            for (int i = 0; i < dtMediiAnuale.Rows.Count; i++)
+            {
+                for (int j = 0; j < dtMediiAnuale.Columns.Count; j++)
+                {
+                    tableMediiAnuale.AddCell(dtMediiAnuale.Rows[i][j].ToString());
+                }
+            }
+            #endregion
+
 
             #region semnatura
             Paragraph footerParagraph = new Paragraph()
@@ -245,8 +290,7 @@ namespace Proiect_final_MTP
             #endregion
 
 
-
-            #region salvare fisier PDF
+            #region generare PDF
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.FileName = fileName;
             saveFileDialog.DefaultExt = ".pdf";
@@ -259,9 +303,10 @@ namespace Proiect_final_MTP
                 document.Add(lineSeparator);
                 document.Add(newLineParagraph);
                 document.Add(newLineParagraph);
-                document.Add(table);
+                document.Add(tableMediiDiscipline);
                 document.Add(newLineParagraph);
                 document.Add(newLineParagraph);
+                document.Add(tableMediiAnuale);
                 document.Add(newLineParagraph);
                 document.Add(newLineParagraph);
                 document.Add(newLineParagraph);
