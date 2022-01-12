@@ -254,6 +254,9 @@
     <EmbeddedResource Include="AdaugareNota.resx">
       <DependentUpon>AdaugareNota.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RaportDetaliat.resx">
       <DependentUpon>RaportDetaliat.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentLogin.resx">
+      <DependentUpon>StudentLogin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

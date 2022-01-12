@@ -30,19 +30,19 @@ namespace Proiect_final_MTP
         private void InitializeComponent()
         {
             this.panelTitle = new System.Windows.Forms.Panel();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnMaximize = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnRestore = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnClearFields = new FontAwesome.Sharp.IconButton();
             this.lblAdminLogin = new System.Windows.Forms.Label();
             this.lblStudentLogin = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnClearFields = new FontAwesome.Sharp.IconButton();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnMaximize = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnRestore = new System.Windows.Forms.Button();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,124 @@ namespace Proiect_final_MTP
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             this.panelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
             this.panelTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseUp);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(194)))));
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(205, 604);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(181, 51);
+            this.btnLogin.TabIndex = 39;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(80, 501);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(436, 33);
+            this.txtPassword.TabIndex = 38;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPassword.Location = new System.Drawing.Point(75, 460);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(112, 27);
+            this.lblPassword.TabIndex = 37;
+            this.lblPassword.Text = "Password*";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(80, 376);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(436, 33);
+            this.txtEmail.TabIndex = 36;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEmail.Location = new System.Drawing.Point(75, 335);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(72, 27);
+            this.lblEmail.TabIndex = 35;
+            this.lblEmail.Text = "Email*";
+            // 
+            // lblAdminLogin
+            // 
+            this.lblAdminLogin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblAdminLogin.AutoSize = true;
+            this.lblAdminLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAdminLogin.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAdminLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAdminLogin.Location = new System.Drawing.Point(233, 662);
+            this.lblAdminLogin.Name = "lblAdminLogin";
+            this.lblAdminLogin.Size = new System.Drawing.Size(131, 23);
+            this.lblAdminLogin.TabIndex = 42;
+            this.lblAdminLogin.Text = "Sunteti admin?";
+            this.lblAdminLogin.Click += new System.EventHandler(this.lblAdminLogin_Click);
+            // 
+            // lblStudentLogin
+            // 
+            this.lblStudentLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblStudentLogin.AutoSize = true;
+            this.lblStudentLogin.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentLogin.Location = new System.Drawing.Point(199, 240);
+            this.lblStudentLogin.Name = "lblStudentLogin";
+            this.lblStudentLogin.Size = new System.Drawing.Size(212, 37);
+            this.lblStudentLogin.TabIndex = 43;
+            this.lblStudentLogin.Text = "Login student";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = global::Proiect_final_MTP.Properties.Resources.icons8_student_100__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(252, 115);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(101, 106);
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnClearFields
+            // 
+            this.btnClearFields.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearFields.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnClearFields.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearFields.FlatAppearance.BorderSize = 0;
+            this.btnClearFields.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearFields.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearFields.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(194)))));
+            this.btnClearFields.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnClearFields.IconColor = System.Drawing.Color.Black;
+            this.btnClearFields.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClearFields.Location = new System.Drawing.Point(399, 569);
+            this.btnClearFields.Name = "btnClearFields";
+            this.btnClearFields.Size = new System.Drawing.Size(134, 30);
+            this.btnClearFields.TabIndex = 40;
+            this.btnClearFields.Text = "Clear Fields";
+            this.btnClearFields.UseVisualStyleBackColor = false;
+            this.btnClearFields.Click += new System.EventHandler(this.btnClearFields_Click);
             // 
             // btnMinimize
             // 
@@ -133,115 +251,6 @@ namespace Proiect_final_MTP
             this.btnRestore.UseVisualStyleBackColor = false;
             this.btnRestore.Visible = false;
             this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(194)))));
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(205, 604);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(181, 51);
-            this.btnLogin.TabIndex = 39;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(80, 501);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(436, 33);
-            this.txtPassword.TabIndex = 38;
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPassword.Location = new System.Drawing.Point(75, 460);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(112, 27);
-            this.lblPassword.TabIndex = 37;
-            this.lblPassword.Text = "Password*";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(80, 376);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(436, 33);
-            this.txtEmail.TabIndex = 36;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblEmail.Location = new System.Drawing.Point(75, 335);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(72, 27);
-            this.lblEmail.TabIndex = 35;
-            this.lblEmail.Text = "Email*";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Proiect_final_MTP.Properties.Resources.icons8_student_100__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(252, 115);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(101, 106);
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnClearFields
-            // 
-            this.btnClearFields.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnClearFields.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClearFields.FlatAppearance.BorderSize = 0;
-            this.btnClearFields.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearFields.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearFields.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(194)))));
-            this.btnClearFields.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnClearFields.IconColor = System.Drawing.Color.Black;
-            this.btnClearFields.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClearFields.Location = new System.Drawing.Point(399, 569);
-            this.btnClearFields.Name = "btnClearFields";
-            this.btnClearFields.Size = new System.Drawing.Size(134, 30);
-            this.btnClearFields.TabIndex = 40;
-            this.btnClearFields.Text = "Clear Fields";
-            this.btnClearFields.UseVisualStyleBackColor = false;
-            this.btnClearFields.Click += new System.EventHandler(this.btnClearFields_Click);
-            // 
-            // lblAdminLogin
-            // 
-            this.lblAdminLogin.AutoSize = true;
-            this.lblAdminLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblAdminLogin.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAdminLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblAdminLogin.Location = new System.Drawing.Point(233, 662);
-            this.lblAdminLogin.Name = "lblAdminLogin";
-            this.lblAdminLogin.Size = new System.Drawing.Size(131, 23);
-            this.lblAdminLogin.TabIndex = 42;
-            this.lblAdminLogin.Text = "Sunteti admin?";
-            this.lblAdminLogin.Click += new System.EventHandler(this.lblAdminLogin_Click);
-            // 
-            // lblStudentLogin
-            // 
-            this.lblStudentLogin.AutoSize = true;
-            this.lblStudentLogin.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentLogin.Location = new System.Drawing.Point(199, 240);
-            this.lblStudentLogin.Name = "lblStudentLogin";
-            this.lblStudentLogin.Size = new System.Drawing.Size(212, 37);
-            this.lblStudentLogin.TabIndex = 43;
-            this.lblStudentLogin.Text = "Login student";
             // 
             // StudentLogin
             // 

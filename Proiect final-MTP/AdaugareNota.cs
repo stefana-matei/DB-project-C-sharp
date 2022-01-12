@@ -204,7 +204,7 @@ namespace Proiect_final_MTP
         //  verificare daca parametrul dat este un numar
         private bool isNumber(string number)
         {
-            if (Regex.IsMatch(number, @"^[0-9]+$"))
+            if (Regex.IsMatch(number, @"^[1-9]+$"))
             {
                 return true;
             }

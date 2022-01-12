@@ -27,7 +27,7 @@ namespace Proiect_final_MTP
             InitializeComponent();
         }
 
-        #region File Upload
+        #region Upload Files
         private void FoaieMatricola_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop, false) == true)
@@ -85,8 +85,12 @@ namespace Proiect_final_MTP
                     MessageBox.Show("Incarcare fisiere cu succes!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     defaultListBox();
                 }
+                else
+                    MessageBox.Show("Nu au fost incarcate fisiere!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 MessageBox.Show(exception.ToString(), "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

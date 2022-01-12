@@ -29,11 +29,11 @@ namespace Proiect_final_MTP
             {
                 if (txtEmail.Text.Equals(""))
                 {
-                    MessageBox.Show("Lipseste email-ul, mai incearca!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lipseste email-ul, mai incercati!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (txtPassword.Text.Equals(""))
                 {
-                    MessageBox.Show("Lipseste parola, mai incearca!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lipseste parola, mai incercati!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
