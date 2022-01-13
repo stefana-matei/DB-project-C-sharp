@@ -87,6 +87,7 @@ namespace Proiect_final_MTP
 
 
         // buton pentru adaugarea unei note unui student in BD
+        // validari pentru campurile an studiu, nr.prezentare, nota
         private void btnAdaugareNota_Click(object sender, EventArgs e)
         {
             try
@@ -201,7 +202,7 @@ namespace Proiect_final_MTP
         }
 
 
-        //  verificare daca parametrul dat este un numar
+        //  validare daca parametrul dat este un numar
         private bool isNumber(string number)
         {
             if (Regex.IsMatch(number, @"^[1-9]+$"))
@@ -212,7 +213,7 @@ namespace Proiect_final_MTP
                 return false;
         }
 
-        // verificare daca parametrul dat este o nota valida
+        // validare daca parametrul dat este o nota corespunzatoare
         private bool isGrade(string number)
         {
             if (Regex.IsMatch(number, @"^([1-9]{1}|10)$"))

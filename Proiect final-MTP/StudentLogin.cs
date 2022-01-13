@@ -24,6 +24,7 @@ namespace Proiect_final_MTP
 
 
         // functionalitate buton de login din Form
+        // validari pentru email si parola introduse de utilizator
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
