@@ -1,4 +1,4 @@
-# Proiect-final-MTP
+# Proiect-final-MTP - Bază de date pentru gestiunea notelor și mediilor studenţilor dintr-o universitate
 
 Pasii pentru rularea proiectului in Visual Studio:
 - pornire MySQL server in XAMPP
