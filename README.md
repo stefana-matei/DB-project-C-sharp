@@ -1,3 +1,3 @@
-Gestiunea notelor și mediilor studenţilor dintr-o universitate.
+Management of grades and averages of students in a university.
 
-Baza de date, tabelele și popularea tabelelor se creează automat la rularea programului.
+The database, tables, and table population are automatically created when the application runs.
